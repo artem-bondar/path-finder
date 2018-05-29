@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Path finder</title>
+  <link rel="stylesheet" href="styles/default.css">
+  <link rel="stylesheet" href="styles/column.css">
+  <link rel="stylesheet" href="styles/templates.css">
+  <link rel="icon" href="images/favicon.png">
+  <script src="scripts/interface.js"></script>
+  <script src="scripts/handlers.js"></script>
+  <script src="scripts/calculations.js"></script>
+  <script src="scripts/graph.js"></script>
+</head>
+
+<body>
+  <header>
+    <p>Path finder</p>
+  </header>
+
+  <div class="view">
+
+    <div class="column">
+      <div id="select-area">
+        <p>Find shortest path from</p>
+        <select id="select-start"></select>
+        <p>to</p>
+        <select id="select-end"></select>
+        <button onclick="findShortestPath()">OK</button>
+      </div>
+      <div class="weigth-field">
+          <p>Display node weights</p>
+          <label class="switch" id="weigth-switch">
+            <input type="checkbox" onchange="handleWeightSwitch()">
+            <span class="switch-slider"></span>
+          </label>
+        </div>
+    </div>
+    <div id="canvas-view">
+      <canvas id="graph-canvas"></canvas>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>Artem Bondar &copy; 2018</p>
+  </footer>
+
+  <script src="scripts/main.js"></script>
+</body>
+</html>

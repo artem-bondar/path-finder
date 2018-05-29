@@ -1,0 +1,36 @@
+.switch {
+    display: inline-block;
+    position: relative;
+    width: 60px;
+    height: 34px;
+}
+
+.switch input { display: none; }
+
+.switch-slider {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    transition: .4s;
+    cursor: pointer;
+    border-radius: 34px;
+    background-color: #ccc;
+}
+
+.switch-slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    transition: .4s;
+    border-radius: 50%;
+    background-color: white;
+}
+
+input:checked + .switch-slider { background-color: steelblue; }
+
+input:checked + .switch-slider:before { transform: translateX(26px); }
