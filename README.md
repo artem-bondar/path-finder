@@ -8,4 +8,4 @@ Just choose two vertices and the shortest path between them will be shown.
 
 Node weights can be displayed by switcher, in this format: *length/speed on node*
 
-![slider](docs/images/map.png)
+![map](docs/images/map.png)
